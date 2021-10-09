@@ -4,9 +4,9 @@ from lib.data_creator import CreateData
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", dest = "save_dir", type = str, required = True)
-    parser.add_argument("-c", dest = "count", type = int)
-    parser.add_argument("-is", dest = "image_size", type = int, default = 224)
+    parser.add_argument("-s", dest = "save_dir", type = str, required = True, help = "The label name of the directory")
+    parser.add_argument("-c", dest = "count", type = int, help = "Total image count that should be save")
+    parser.add_argument("-is", dest = "image_size", type = int, default = 224, help = "The size in which the image should saved")
 
     args = parser.parse_args()
 
